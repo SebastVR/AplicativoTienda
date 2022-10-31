@@ -8,23 +8,29 @@ import {
   CLEAR_ERRORS,
 } from '../constants/productConstants';
 
-export const productsReducer = (state = { products: [] }, action) => {
+const initialStateList = {
+  productos: [],
+  loading: false,
+  cantidad: 0,
+  error: null,
+};
+
+export const productsReducer = (state = initialStateList, action) => {
   switch (action.type) {
     case ALL_PRODUCTS_REQUEST:
-      return {
-        loading: true,
-        productos: [],
-      };
+      return initialStateList;
 
     case ALL_PRODUCTS_SUCCESS:
       return {
         loading: false,
         productos: action.payload.productos,
         cantidad: action.payload.cantidad,
+        error: null,
       };
 
     case ALL_PRODUCTS_FAIL:
       return {
+        ...state,
         loading: false,
         error: action.payload,
       };
@@ -40,19 +46,24 @@ export const productsReducer = (state = { products: [] }, action) => {
   }
 };
 
+const initialStateDetail = {
+  product: {},
+  loading: false,
+  error: null,
+};
+
 //REDUCER PARA TENER TODOS LOS DETALLES
-export const productDetailsReducer = (state = { product: {} }, action) => {
+export const productDetailsReducer = (state = initialStateDetail, action) => {
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
+      return initialStateDetail;
 
     case PRODUCT_DETAILS_SUCCESS:
       return {
+        ...state,
         loading: false,
         product: action.payload,
+        error: null,
       };
 
     case PRODUCT_DETAILS_FAIL:
@@ -61,13 +72,12 @@ export const productDetailsReducer = (state = { product: {} }, action) => {
         error: action.payload,
       };
 
-    case CLEAR_ERRORS:
-      return {
-        ...state,
-        error: null,
-      };
-
     default:
       return state;
   }
+};
+
+export const initialState = {
+  products: initialStateList,
+  productDetails: initialStateDetail,
 };
