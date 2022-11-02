@@ -7,14 +7,14 @@ import { useAlert } from 'react-alert';
 
 export const Home = () => {
   const { loading, productos, error } = useSelector((state) => state.products);
-  //const alert = useAlert();
+  const alert = useAlert();
   const dispatch = useDispatch();
   useEffect(() => {
     if (error) {
-      //return alert.error(error);
+      return alert.error(error);
     }
     dispatch(getProducts());
-  }, [dispatch]);
+  }, [dispatch])
   return (
     <Fragment>
       {loading ? (
