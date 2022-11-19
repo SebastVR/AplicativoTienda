@@ -14,7 +14,7 @@ export const Home = () => {
       return alert.error(error);
     }
     dispatch(getProducts());
-  }, [dispatch])
+  }, [alert, dispatch, error]);
   return (
     <Fragment>
       {loading ? (
