@@ -1,0 +1,36 @@
+{
+  "item": [
+    {
+      "_id": "6355a63ad3bf2b077f66329c",
+      "producto": "Camisa nueva coleccion",
+      "precio": 60000,
+      "imagen": "./images/productos/IMG_20220810_184900.jpg",
+      "inventario": 50,
+      "__v": 0
+    },
+    {
+      "_id": "63608bb8e117a082949166ae",
+      "nombre": "Camisa para dama joven",
+      "precio": 50000,
+      "imagen": "./images/productos/IMG_20220810_184940.jpg",
+      "inventario": 40,
+      "__v": 0
+    },
+    {
+      "_id": "63626f55e79027a1753b92de",
+      "nombre": "Camisa deportiva",
+      "precio": 65000,
+      "imagen": "./images/productos/IMG_20220810_185030.jpg",
+      "inventario": 74,
+      "__v": 0
+    },
+    {
+      "_id": "63626fe4e79027a1753b92df",
+      "nombre": "Camisa para mujer",
+      "precio": 70000,
+      "imagen": "./images/productos/IMG_20220810_185056.jpg",
+      "inventario": 72,
+      "__v": 0
+    }
+  ]
+}

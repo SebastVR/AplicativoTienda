@@ -38,9 +38,9 @@ const productosSchema = mongoose.Schema({
     required:[true, "Por favor seleccione la categoría del producto."],
     enum:{
       values:[
-        "Alimento seco",
-        "Alimento humedo",
-        "Accesorios",
+        "Fines de semana",
+        "Juvenil",
+        "Deporte",
         "Cuidado e Higiene",
         "Medicamentos",
         "Snacks",
