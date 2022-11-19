@@ -54,3 +54,13 @@ npm start
 # Desarrollador: Andres Felipe Devia
 # Desarrollador: Cristian David Parroquiano Jimenez
 # Desarrollador: Francisco Leon Gomez Neira
+
+
+# DOCKER
+https://hub.docker.com/_/node
+docker pull node 
+docker build .    
+docker images  ---> Mirar el id copiar y pegar en el siguiente comando (f97380f78c4d)
+docker run -it f97380f78c4d
+docker build -t apptienda .  --> Poner nombre a la imagen 
+docker run  -p 3000:3000 app serve -s build
